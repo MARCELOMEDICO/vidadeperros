@@ -134,7 +134,7 @@ footer{
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    
 
 }
 footer h2{
@@ -143,8 +143,8 @@ footer h2{
     font-size: 3rem;
     color: rgb(207, 172, 17);
     text-align: center;
-    
-    
+    width: 100%;
+      
 }
 
 @media screen and (max-width: 730px){
