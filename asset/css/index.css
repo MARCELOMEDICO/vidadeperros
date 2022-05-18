@@ -39,16 +39,19 @@ body{
     height: 16vh;
     border-radius: 20px
 }
+.titulo__text{
+    width: 100%;
+}
 .titulos__central{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid rgb(7, 26, 134);
     width: 100%;
+    height: 100%;
     display:grid;
     justify-content: center;
     align-content: center;
-    font-size: 2.6rem;
-    min-width: 300px;
+    font-size: 3.6vw;
 }
 .titulos__menu{
     display: flex;
@@ -66,7 +69,7 @@ body{
     text-transform: uppercase;
     list-style: none;
     font-size: 2.2rem;
-    padding: 30px;
+    padding: 0.9em;
 }
 .titulos__menu a{
     text-decoration: none;
@@ -141,6 +144,7 @@ footer h2{
     
 }
 .titulo__gallery h3{
+    text-transform: uppercase;
     color: #54e211;
     font-size: 4rem;
     display: flex;
@@ -164,22 +168,57 @@ footer h2{
 .gallery--grid img{
     width: 100%;
     height: 100%;
-    transition: width .25s, box-shadow .25s;
     width: 150px;
+    object-fit: contain;
+    transition: transform .4s;
     
 }
 .gallery--grid img:hover{
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
-    width: 200px;
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+/* ESTA SECCION SON LOS MODIFICADORES DE LOS LINK DE LOS PERROS */
+.container_link--centrar{
+    border: 3px solid black;
+    margin: auto;
+    line-height: 4;
+    display: grid;
+    grid-template-areas:"perro button"
+                        "detalle detalle"
+                        "detalle detalle";
+}
+.etiqueta{
+    display: grid;
+    grid-template-rows: 11vh 5px auto;
+    /* los 5px son de la liena que separa el contenido con el header */
+}
+.lista__info--left li{
+    list-style: upper-alpha;
+    position: relative;
+    left: 30px;
+    font-size: 1rem;
 }
 
 
+/*diseño de la pagina de perros */
+.perro{
+    grid-area: perro;
+}
+picture.perro img{
+    width: 200px;
+}
+.button{
+    grid-area: button;
+    font-size: 3rem;
 
-
-
-
-
-
+}
+.button:hover{
+    transform: rotate(-10deg) scale(1.3);
+    transition: transform .5s;
+}
+.detalle{
+    grid-area: detalle;
+}
 
 
 
@@ -187,8 +226,9 @@ footer h2{
 @media screen and (max-width: 730px){
     .titulos{
         color: #29cd7b;
-        flex-direction: column;   
-    }
+        flex-flow: column;
+    }  
+    
     .titulos__menu{
         display: flex;
         justify-content: space-around;
@@ -196,8 +236,11 @@ footer h2{
    .titulos__logo{
        width: 100%;  
    }
+   .titulo__text{
+       width: 100%;
+   }
    .titulos__central{
-       font-size: 7.2vw;;
+       font-size: 7.1vw;
    }
    .grilla{ 
        display: contents;   
@@ -224,5 +267,6 @@ footer h2{
         text-align: center;
         width: 100%;
     }
-    /* -------------------------------------------- */
 }
+
+    /* -------------------------------------------- */
