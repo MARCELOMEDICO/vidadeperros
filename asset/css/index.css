@@ -4,7 +4,7 @@
     font-size: 62.5%;
 }
 body{
-    border: solid 7px red; 
+    border: solid 7px rgb(22, 100, 163); 
     width: 100%;  
     min-height: 100vh;
 }
@@ -61,11 +61,11 @@ body{
     justify-content: space-between;   
 }
 .titulos__menu :hover{
-    background-color: #5eff00;
+    /* background-color: #5eff00; */
     transition: .5s ease-in-out;
     border-radius: 20px;
 }
-.titulos__menu li{
+.titulos__menu div button a{
     text-transform: uppercase;
     list-style: none;
     font-size: 2.2rem;
@@ -170,8 +170,7 @@ footer h2{
     height: 100%;
     width: 150px;
     object-fit: contain;
-    transition: transform .4s;
-    
+    transition: transform .4s;   
 }
 .gallery--grid img:hover{
     filter: blur(2px);
@@ -190,7 +189,7 @@ footer h2{
 .etiqueta{
     display: grid;
     grid-template-rows: 11vh 5px auto;
-    /* los 5px son de la liena que separa el contenido con el header */
+/* los 5px son de la liena que separa el contenido con el header */
 }
 .lista__info--left li{
     list-style: upper-alpha;
@@ -198,19 +197,18 @@ footer h2{
     left: 30px;
     font-size: 1rem;
 }
-
-
 /*diseño de la pagina de perros */
 .perro{
     grid-area: perro;
 }
 picture.perro img{
     width: 200px;
+    height: 150px;
+    box-shadow: 6px 6px #e4dadaad;
 }
 .button{
     grid-area: button;
-    font-size: 3rem;
-
+    font-size: 4rem;
 }
 .button:hover{
     transform: rotate(-10deg) scale(1.3);
@@ -219,16 +217,12 @@ picture.perro img{
 .detalle{
     grid-area: detalle;
 }
-
-
-
 /* media queries del index */
 @media screen and (max-width: 730px){
     .titulos{
         color: #29cd7b;
         flex-flow: column;
     }  
-    
     .titulos__menu{
         display: flex;
         justify-content: space-around;

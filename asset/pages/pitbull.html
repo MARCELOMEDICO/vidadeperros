@@ -5,27 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERRO PITBULL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
 </head>
-<body class="gradiente__gallery etiqueta">
-    <header class="titulo__gallery ">
+<body class="gradiente__gallery min-vh-100">
+    <header class="titulo__gallery">
         <a href="../../index.html"><img src="../img/logo.jpg" alt="logo de perro"></a>
-        <h3>PERRO PITBULL</h3>
+        <h3 class="fs-1">PERRO PITBULL</h3>
     </header>
     <span class="linea"></span>
-    <nav class="container_link--centrar">
-        <picture class="perro">
-            <img src="../img/pitbull.jpeg" alt="perro pitbull" >
-        </picture>
-        <form action="../pages/gallery.html" class="button">
-            <button type="submit">GALLERY</button>
-        </form>
-        <ul class="lista__info--left detalle">
-            <li>100kg</li>
-            <li>solo alimento</li>
-            <li>alimento solido despues de año</li>
-            <li>controlar parazitos cada 3 meses</li>
-        </ul>            
-    </nav>
+    <div class="card rounded mx-auto container-sm " style="width:60em ;">
+        <img src="../img/pitbull.jpeg" class="img-fluid rounded-start" alt="...">
+        <div class="card-body">
+            <h5 class="card-title fs-1 text-center">PITBULL</h5>
+            <p class="card-text fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, iste adipisci perferendis aliquid </p>
+          </div>
+          <ul class="list-group list-group-flush ">
+            <li class="list-group-item fs-2">100kg</li>
+            <li class="list-group-item fs-2">solo alimento</li>
+            <li class="list-group-item fs-2">alimento solido despues de año</li>
+            <li class="list-group-item fs-2">controlar parazitos cada 3 meses</li>
+          </ul>
+          <div class="card-body d-grid ">
+            <a href="../pages/gallery.html" class="btn btn-primary fs-1">GALLERY</a>
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
