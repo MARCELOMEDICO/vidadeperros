@@ -14,14 +14,18 @@ body{
     width: 100%;
     margin: 0 auto;
     display: grid;
-
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 100%;
     /*background del body*/
-    background-image:url("../img/background__left.jpg"),url("../img/background__rigth.jpg");
+    /* background-image:url("../img/background__left.jpg"),url("../img/background__rigth.jpg");
     background-repeat: no-repeat ;
     background-position: left, right;
-    background-size: 50% 100%;       
+    background-size: 50% 100%;        */
+}
+.grid__row-3{
+    display: grid;
+    grid-template-rows: 10vh 5px auto 12vh; /*los 5px son de la linea*/
+
 }
 /*encabezado*/
 .header{
@@ -29,7 +33,8 @@ body{
     background-image: linear-gradient(red, yellow);
 }
 .titulos{
-    display: flex;
+    /* nada que agregar */
+    
 }
 .titulos__logo{
     width: 100%;
@@ -41,24 +46,27 @@ body{
 }
 .titulo__text{
     width: 100%;
+    
 }
 .titulos__central{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid rgb(7, 26, 134);
+    border: 3px solid rgb(7, 26, 134);
     width: 100%;
     height: 100%;
-    display:grid;
+    font-size: 5.6rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    font-size: 3.6rem;
+    color: cornsilk;
+    
 }
 .titulos__menu{
     display: flex;
-    align-items: center;
     width: 100%;
     border: 2px solid;
-    justify-content: space-between;   
+    flex-direction: column;   
 }
 .titulos__menu :hover{
     /* background-color: #5eff00; */
@@ -73,6 +81,8 @@ body{
 }
 .titulos__menu a{
     text-decoration: none;
+    color: #000000;
+    font-weight: bold;/* coloca el texto con negrita standar*/
 }
 .banner{
     display: flex;
@@ -88,24 +98,24 @@ body{
     display: grid;
     grid-template-columns: repeat(5,auto);
     /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-    grid-gap: 1.1rem;      
+          
 }
 /*reel borde*/
 .grilla__reel{
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(179, 190, 14);
     backdrop-filter: blur(10px);
-    padding: 10.5em;
+    padding: 10px;
     display: grid;
     grid-template-rows: auto auto 1fr;
     grid-gap: 1.1em;
 }
 .subtitulos{
     text-transform: uppercase;
-    
     width: 100%;
     border: 1px solid rgb(0, 0, 0);
     text-align: center; 
     font-size: 2.1rem;
+    background-color: crimson;
 }
 .grilla__imagen img{/*imagenes de las etiquetas*/
     width: 100%;
@@ -125,14 +135,14 @@ footer h2{
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.5rem;
-    color: rgb(207, 172, 17);
+    color: rgb(216, 25, 25);
     text-align: center;
     width: 100%;
+    font-weight: bold;
 }
 /* aqui en el codigo de gallery */
 .gradiente__gallery{
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-image: linear-gradient(180deg, #ffff7c 0, #ffff6f 12.5%, #fff565 25%, #ffda5c 37.5%, #f2bd53 50%, #dda14c 62.5%, #c98a46 75%, #b77642 87.5%, #a8663f 100%);
 }
 .titulo__gallery{
     display: grid;
@@ -217,6 +227,48 @@ picture.perro img{
 .detalle{
     grid-area: detalle;
 }
+/*clase editora de footer en nosotros y contacto*/
+.footer__icon{
+    display: flex;
+    border: 5px solid;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    padding: 5px;
+
+}
+.footer__icon img{
+    height: 100%;
+    width: 100%;
+}
+.formulario--center{
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.formulario__label{
+    gap: 54px;
+    display: flex;
+}
+.formulario__btn-msj{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+ç
+
+
+
+
+
 /* media queries del index */
 @media screen and (max-width: 730px){
     .titulos{
@@ -226,6 +278,9 @@ picture.perro img{
     .titulos__menu{
         display: flex;
         justify-content: space-around;
+        overflow: hidden;
+        align-items: center;
+        
     }
    .titulos__logo{
        width: 100%;  
@@ -234,7 +289,7 @@ picture.perro img{
        width: 100%;
    }
    .titulos__central{
-       font-size: 7.1vw;
+       font-size: 6.9vw;
    }
    .grilla{ 
        display: contents;   
@@ -256,7 +311,7 @@ picture.perro img{
     footer h2{
         text-transform: uppercase;
         font-family: 'Times New Roman', Times, serif;
-        font-size: 1.7rem;
+        font-size: 2.4rem;
         color: rgb(207, 172, 17);
         text-align: center;
         width: 100%;

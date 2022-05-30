@@ -8,39 +8,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
 </head>
-<body class="gradiente__gallery min-vh-100">
-    <nav>
-        <header class="titulo__gallery ">
-            <a href="../../index.html"><img src="../img/logo.jpg" alt="logo de perro"></a>
-            <h3>envianos un e-mail</h3>
-        </header>
-        <span class="linea"></span>
-        <form>
-            <div>
-                <label class="fs-1" >Nombre</label>
-                <input class="fs-1" type="text" placeholder="ingresa tu nombre">
-            </div>
-            <div>
-                <label class="fs-1">e-mail</label>
-                <input class="fs-1" type="text" placeholder="ingresa tu e-mail">
-            </div><div>
-                <label class="fs-1" >asunto</label>
-                <select class="fs-1" name="optititit" id="">
-                    <option class="fs-1" value="--seleccione algo--">--seleccione algo--</option>
-                    <option class="fs-1" value="compre">compre</option>
-                    <option class="fs-1"value="donaciones">donaciones</option>
-                    <option class="fs-1" value="recoemendaciones">recoemendaciones</option>
-                    <option class="fs-1" value="critica">critica</option>
-                </select>
-            </div><div>
-                <label class="fs-1">Mensaje</label>
-                <input class="fs-1" type="text" placeholder="ingresa tu mesnaje">
-            </div>
-            <div>
-                <input class="fs-1" type="button" value="enviar mensaje">
-            </div>
-        </form>
-    </nav>
+<body class="gradiente__gallery min-vh-100 grid__row-3">
+    <header class="titulo__gallery ">
+        <a href="../../index.html"><img src="../img/logo.jpg" alt="logo de perro"></a>
+        <h3>envianos un e-mail</h3>
+    </header>
+    <span class="linea"></span>
+    <form class="formulario--center">
+        <div class="formulario__label">
+            <label class="fs-1" >Nombre</label>
+            <input class="fs-1" type="text" placeholder="ingresa tu nombre">
+        </div>
+        <div class="formulario__label">
+            <label class="fs-1">e-mail</label>
+            <input class="fs-1" type="text" placeholder="ingresa tu e-mail">
+        </div>
+        <div class="formulario__label">
+            <label class="fs-1" >asunto</label>
+            <select class="fs-1" name="optititit" id="">
+                <option class="fs-1" value="--seleccione algo--">--seleccione algo--</option>
+                <option class="fs-1" value="compre">compre</option>
+                <option class="fs-1"value="donaciones">donaciones</option>
+                <option class="fs-1" value="recoemendaciones">recoemendaciones</option>
+                <option class="fs-1" value="critica">critica</option>
+            </select>
+        </div>
+        <div class="formulario__label">
+            <label class="fs-1">Mensaje</label>
+            <input class="fs-1" type="text" placeholder="ingresa tu mesnaje">
+        </div>
+        <div class="formulario__btn-msj">
+            <input class="fs-1" type="button" value="enviar mensaje">
+        </div>
+    </form>
+    <footer>
+        <picture class="footer__icon">
+            <a href="#"><img src="../img/icon/facebook_icon.png" alt="icono de facebook_icon"></img></a>
+            <a href="#"><img src="../img/icon/G+_icon.png" alt="icono de google+"></img></a>
+            <a href="#"><img src="../img/icon/instagram_icon.png" alt="icono de instagram"></img></a>
+            <a href="#"><img src="../img/icon/twitter_icon.png" alt="icono de twitter"></img></a>
+            <a href="#"><img src="../img/icon/youtube_icon.png" alt="icono de youtube"></img></a>
+        </picture>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
 </body>
 </html>
