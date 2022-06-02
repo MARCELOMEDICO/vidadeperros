@@ -32,6 +32,10 @@ body{
     border-radius: 20px;
     background-image: linear-gradient(red, yellow);
 }
+.titulos{
+    /* nada que agregar */
+    
+}
 .titulos__logo{
     width: 100%;
     display: flex;
@@ -252,6 +256,17 @@ picture.perro img{
     display: flex;
     justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* media queries del index */
