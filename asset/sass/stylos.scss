@@ -1,8 +1,10 @@
 $primary-color: #ffa;
 $secundary-color: #ffa;
 $font-color: black;
+$font-size-link:6rem;
 $m-center: margin (0 auto);
 $background-header:linear-gradient(red, yellow);
+$icon: 12vh;
 
 @mixin wi_he-100{
     width: 100%;
@@ -12,7 +14,9 @@ $background-header:linear-gradient(red, yellow);
     background: #fd0048;
     width: 100%;
     height: 5px;
-    display: block;}
+    display: block;
+    margin-bottom: 10px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -36,9 +40,9 @@ body{
 }
 .grid__row-3{
     display: grid;
-    grid-template-rows: 10vh 5px auto 12vh; /*los 5px son de la linea*/
+    grid-template-rows: $icon 5px auto 12vh; /*los 5px son de la linea*/
 }
-header{
+.titulos{
     border-radius: 20px;
     background-image: $background-header;
 }
@@ -46,7 +50,7 @@ header{
     width: 100%;
     display: flex;
     img{
-        height: 16vh;
+        height:$icon;
         border-radius: 20px
     }
 }
@@ -58,7 +62,6 @@ header{
 .titulos__central{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    border: 3px solid rgb(7, 26, 134);
     @include wi_he-100();  /*estos en un mixin*/
     font-size: 5.6rem;
     font-weight: bold;
@@ -70,7 +73,6 @@ header{
 .titulos__menu{
     display: flex;
     width: 100%;
-    border: 2px solid;
     flex-direction: column;
     a{
         text-decoration: none;
@@ -96,7 +98,6 @@ header{
     margin-top: 2em;
     flex-direction: column;
     align-content: center;
-    border: solid 6px #630d79;
     img{
         border-radius: 50px;
     }
@@ -154,21 +155,8 @@ footer{
 .gradiente__gallery{
     background-image: linear-gradient(180deg, #ffff7c 0, #ffff6f 12.5%, #fff565 25%, #ffda5c 37.5%, #f2bd53 50%, #dda14c 62.5%, #c98a46 75%, #b77642 87.5%, #a8663f 100%);
 }
-.titulo__gallery{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    img{
-        height: 10vh;
-        border-radius: 20px;}
-    h3{
-        text-transform: uppercase;
-        color: #54e211;
-        font-size: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;  
-    }    
-}
+
+/*la linea roja de los link*/ 
 .linea{
     @include linea();
 }
@@ -178,7 +166,8 @@ footer{
     width: 95%;
     grid-gap: 10px;
     margin: auto;
-    img{width: 100%;
+    img{
+        width: 100%;
         height: 100%;
         width: 150px;
         object-fit: contain;
@@ -190,43 +179,76 @@ footer{
 }
 /* ESTA SECCION SON LOS MODIFICADORES DE LOS LINK DE LOS PERROS */
 
+/*aui el titulo de los link*/ 
+header.titulo__gallery{
+    border-radius: 20px;
+    background-image: $background-header;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    a{
+        img{
+            height: $icon;
+            border-radius: 20px;
+        }
+    }
+    h3{
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+        color: #23ad61;
+        font-size: $font-size-link;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+    }    
+}
+// aqui le tamaño de las img de los link
+body div.card {
+    width: 80em;
+    img{
+        width: 300px;
+        margin: 10px auto;
+        
+    }
+}
+div.card-body{
+    margin-top: -10px;
+}
 .container_link--centrar{
+    width: 400px;
+    height: 85vh;
     border: 3px solid black;
     margin: auto;
-    line-height: 4;
     display: grid;
     grid-template-areas:"perro button"
                         "detalle detalle"
-                        "detalle detalle";
+                        ;
+    picture img{
+        width: 250px;
+    }                    
 }
 .perro{
+    align-self: center;
+    justify-self: center;
     grid-area: perro;}
 .detalle{
     grid-area: detalle;}
-.etiqueta{
-    display: grid;
-    grid-template-rows: 11vh 5px auto;
-    /* los 5px son de la liena que separa el contenido con el header */
-}
+
 .lista__info--left{
     li{
         list-style: upper-alpha;
-        position: relative;
-        left: 30px;
-        font-size: 1rem;
+        font-size: 2.4rem;
+        margin: 18px 11px;
+
     }
 }
-/*diseño de la pagina de perros */
-// picture{
-//     img{
-//         width: 200px;
-//         height: 150px;
-//         box-shadow: 6px 6px #e4dadaad;
-//         }
-// }
+
 .button{
+    display: block;
+    align-self: center;
+    justify-self: center;
     grid-area: button;
-    font-size: 4rem;
+    font-size: 3rem;
     &:hover{
         transform: rotate(-10deg) scale(1.3);
         transition: transform .5s;
