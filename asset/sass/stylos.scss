@@ -6,6 +6,32 @@ $m-center: margin (0 auto);
 $background-header:linear-gradient(red, yellow);
 $icon: 12vh;
 
+.centrar__text{ /*esta clase es para hacer un extend*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$icon_red:(/*esto es un maps*/
+    facebook:url("../img/icon/facebook_icon.png"),
+    Linkedin:url("../img/icon/linked_icon.png"),
+    insta:url("../img/icon/instagram_icon.png"),
+    twitter:url("../img/icon/twitter_icon.png"),
+    yotutube:url("../img/icon/youtube_icon.png")
+
+);
+@each $red, $link in $icon_red{ /*esto es una condicional*/
+    .btn--#{$red}{
+        background-image: $link;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 70px;
+        height: auto;
+        margin: 0 auto;
+                 
+    }
+}
+
 @mixin wi_he-100{
     width: 100%;
     height: 100%;
@@ -65,9 +91,7 @@ body{
     @include wi_he-100();  /*estos en un mixin*/
     font-size: 5.6rem;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .centrar__text;/*entension*/
     color: cornsilk;
 }
 .titulos__menu{
@@ -123,6 +147,7 @@ body{
     text-align: center; 
     font-size: 2.1rem;
     background-color: crimson;
+    color: $secundary-color;
 }
 .grilla__imagen{
     img{
@@ -137,19 +162,35 @@ body{
     font-size: 1.6rem;
     text-align: justify;
 }
-footer{
-    height: 12vh;
+footer{/*aeui el footer se configura tanto para index como para los link con las redes*/
     display: flex;
-    align-items: center;
-    h2{
-        text-transform: uppercase;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 2.5rem;
-        color: rgb(216, 25, 25);
-        text-align: center;
-        width: 100%;
-        font-weight: bold;
+    height: 12vh;
+    @extend .centrar__text;/*entension*/
+    &.footer__index{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        
+
+        .icon_face{
+            background-image: map-get($icon_red, facebook);/*dato obtenido del maps*/
+            background-repeat: no-repeat;
+            background-repeat: no-repeat;
+            background-size: auto 9vh;
+            height: 100%;
+            background-position: center;
+        }
+        h2{
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5rem;
+            color: rgb(46, 26, 26);
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+        }
+
     }
+    
 }
 /* aqui en el codigo de gallery */
 .gradiente__gallery{
@@ -197,9 +238,7 @@ header.titulo__gallery{
         color: #23ad61;
         font-size: $font-size-link;
         font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;  
+        @extend .centrar__text;/*entension*/ 
     }    
 }
 // aqui le tamaño de las img de los link
@@ -256,15 +295,11 @@ div.card-body{
 }
 /*clase editora de footer en nosotros y contacto*/
 .footer__icon{
-    display: flex;
-    border: 5px solid;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
     width: 100%;
     height: 100%;
-    justify-content: space-evenly;
-    padding: 5px;
-    img{
-        @include wi_he-100();    
-    }
+    margin-bottom: 20px;
 }
 .formulario--center{
     margin: 0 auto;
@@ -302,6 +337,17 @@ div.card-body{
    }
    .titulos__central{
        font-size: 6.9vw;
+   }
+   header.titulo__gallery{
+       h3{
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+        color: #23ad61;
+        font-size: 7vw;
+        font-weight: bold;
+        @extend .centrar__text;/*entension*/ 
+
+       }
    }
    .grilla{ 
        display: contents;   

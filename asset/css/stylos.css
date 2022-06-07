@@ -1,3 +1,60 @@
+.centrar__text, header.titulo__gallery h3, footer, .titulos__central {
+  /*esta clase es para hacer un extend*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*esto es una condicional*/
+.btn--facebook {
+  background-image: url("../img/icon/facebook_icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*esto es una condicional*/
+.btn--Linkedin {
+  background-image: url("../img/icon/linked_icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*esto es una condicional*/
+.btn--insta {
+  background-image: url("../img/icon/instagram_icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*esto es una condicional*/
+.btn--twitter {
+  background-image: url("../img/icon/twitter_icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*esto es una condicional*/
+.btn--yotutube {
+  background-image: url("../img/icon/youtube_icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: auto;
+  margin: 0 auto;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -52,9 +109,7 @@ body {
   /*estos en un mixin*/
   font-size: 5.6rem;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*entension*/
   color: cornsilk;
 }
 
@@ -113,6 +168,7 @@ body {
   text-align: center;
   font-size: 2.1rem;
   background-color: crimson;
+  color: #ffa;
 }
 
 .grilla__imagen img {
@@ -129,15 +185,29 @@ body {
 }
 
 footer {
-  height: 12vh;
+  /*aeui el footer se configura tanto para index como para los link con las redes*/
   display: flex;
-  align-items: center;
+  height: 12vh;
+  /*entension*/
 }
-footer h2 {
+footer.footer__index {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+footer.footer__index .icon_face {
+  background-image: url("../img/icon/facebook_icon.png");
+  /*dato obtenido del maps*/
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: auto 9vh;
+  height: 100%;
+  background-position: center;
+}
+footer.footer__index h2 {
   text-transform: uppercase;
   font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
-  color: rgb(216, 25, 25);
+  color: rgb(46, 26, 26);
   text-align: center;
   width: 100%;
   font-weight: bold;
@@ -195,9 +265,7 @@ header.titulo__gallery h3 {
   color: #23ad61;
   font-size: 6rem;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*entension*/
 }
 
 body div.card {
@@ -254,16 +322,11 @@ div.card-body {
 
 /*clase editora de footer en nosotros y contacto*/
 .footer__icon {
-  display: flex;
-  border: 5px solid;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   width: 100%;
   height: 100%;
-  justify-content: space-evenly;
-  padding: 5px;
-}
-.footer__icon img {
-  width: 100%;
-  height: 100%;
+  margin-bottom: 20px;
 }
 
 .formulario--center {
@@ -308,6 +371,15 @@ div.card-body {
 
   .titulos__central {
     font-size: 6.9vw;
+  }
+
+  header.titulo__gallery h3 {
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    color: #23ad61;
+    font-size: 7vw;
+    font-weight: bold;
+    /*entension*/
   }
 
   .grilla {
