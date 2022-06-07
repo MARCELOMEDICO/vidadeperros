@@ -1,0 +1,38 @@
+footer{/*aeui el footer se configura tanto para index como para los link con las redes*/
+    display: flex;
+    height: 12vh;
+    @extend .centrar__text;/*entension*/
+    &.footer__index{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        
+
+        .icon_face{
+            background-image: map-get($icon_red, facebook);/*dato obtenido del maps*/
+            background-repeat: no-repeat;
+            background-repeat: no-repeat;
+            background-size: auto 9vh;
+            height: 100%;
+            background-position: center;
+        }
+        h2{
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5rem;
+            color: rgb(46, 26, 26);
+            text-align: center;
+            width: 100%;
+            font-weight: bold;
+        }
+
+    }
+    
+}
+/*clase editora de footer en nosotros y contacto*/
+.footer__icon{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}

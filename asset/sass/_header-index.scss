@@ -1,0 +1,61 @@
+.container{
+    max-width: 1000px;
+    min-width: 300px;
+    width: 100%;
+    margin: $m-center;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 100%;
+}
+.grid__row-3{
+    display: grid;
+    grid-template-rows: $icon 5px auto 12vh; /*los 5px son de la linea*/
+}
+.titulos{
+    border-radius: 20px;
+    background-image: $background-header;
+}
+.titulos__logo{
+    width: 100%;
+    display: flex;
+    img{
+        height:$icon;
+        border-radius: 20px
+    }
+}
+
+.titulo__text{
+    width: 100%;
+}
+
+.titulos__central{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    @include wi_he-100();  /*estos en un mixin*/
+    font-size: 5.6rem;
+    font-weight: bold;
+    @extend .centrar__text;/*entension*/
+    color: cornsilk;
+}
+.titulos__menu{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    a{
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;/* coloca el texto con negrita standar*/}
+    &:hover{
+        transition: .5s ease-in-out;
+        border-radius: 20px;}
+    div{
+        button{
+            a{
+                text-transform: uppercase;
+                list-style: none;
+                font-size: 2.2rem;
+                padding: 0.9em;
+            }
+        }
+    }   
+}

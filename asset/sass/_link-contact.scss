@@ -1,0 +1,15 @@
+.formulario--center{
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.formulario__label{
+    gap: 54px;
+    display: flex;
+}
+.formulario__btn-msj{
+    display: flex;
+    justify-content: center;
+}

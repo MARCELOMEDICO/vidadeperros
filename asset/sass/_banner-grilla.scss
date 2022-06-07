@@ -1,0 +1,46 @@
+
+.banner{
+    display: flex;
+    margin-top: 2em;
+    flex-direction: column;
+    align-content: center;
+    img{
+        border-radius: 50px;
+    }
+}
+.grilla{
+    /*contenido de las etiquetas*/
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+}
+.grilla__reel{
+    border: 2px solid rgb(179, 190, 14);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 1.1em;
+
+}
+.subtitulos{
+    text-transform: uppercase;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center; 
+    font-size: 2.1rem;
+    background-color: crimson;
+    color: $secundary-color;
+}
+.grilla__imagen{
+    img{
+        /*imagenes de las etiquetas*/
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }
+}
+.grilla__text{
+    /*texto de las etiquetas*/
+    font-size: 1.6rem;
+    text-align: justify;
+}

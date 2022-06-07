@@ -1,0 +1,11 @@
+@each $red, $link in $icon_red{ /*esto es una condicional*/
+    .btn--#{$red}{
+        background-image: $link;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 70px;
+        height: auto;
+        margin: 0 auto;
+                 
+    }
+}
