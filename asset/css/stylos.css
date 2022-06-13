@@ -6,6 +6,7 @@
   width: 70px;
   height: auto;
   margin: 0 auto;
+  background-position: center;
 }
 
 /*esto es una condicional*/
@@ -16,6 +17,7 @@
   width: 70px;
   height: auto;
   margin: 0 auto;
+  background-position: center;
 }
 
 /*esto es una condicional*/
@@ -26,6 +28,7 @@
   width: 70px;
   height: auto;
   margin: 0 auto;
+  background-position: center;
 }
 
 /*esto es una condicional*/
@@ -36,6 +39,7 @@
   width: 70px;
   height: auto;
   margin: 0 auto;
+  background-position: center;
 }
 
 /*esto es una condicional*/
@@ -46,6 +50,7 @@
   width: 70px;
   height: auto;
   margin: 0 auto;
+  background-position: center;
 }
 
 * {
@@ -60,199 +65,14 @@ body {
   min-height: 100vh;
 }
 
-.centrar__text, header.titulo__gallery h3, footer, .titulos__central {
+/* ESTA SECCION SON LOS LINK DE LOS PERROS */
+.centrar__text, footer, .titulos__central, header.titulo__gallery h3 {
   /*esta clase es para hacer un extend*/
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-body {
-  width: 100%;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 1000px;
-  min-width: 300px;
-  width: 100%;
-  margin: margin 0 auto;
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: 100%;
-}
-
-.grid__row-3 {
-  display: grid;
-  grid-template-rows: 12vh 5px auto 12vh;
-  /*los 5px son de la linea*/
-}
-
-.titulos {
-  border-radius: 20px;
-  background-image: linear-gradient(red, yellow);
-}
-
-.titulos__logo {
-  width: 100%;
-  display: flex;
-}
-.titulos__logo img {
-  height: 12vh;
-  border-radius: 20px;
-}
-
-.titulo__text {
-  width: 100%;
-}
-
-.titulos__central {
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  height: 100%;
-  /*estos en un mixin*/
-  font-size: 5.6rem;
-  font-weight: bold;
-  /*entension*/
-  color: cornsilk;
-}
-
-.titulos__menu {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-.titulos__menu a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  /* coloca el texto con negrita standar*/
-}
-.titulos__menu:hover {
-  transition: 0.5s ease-in-out;
-  border-radius: 20px;
-}
-.titulos__menu div button a {
-  text-transform: uppercase;
-  list-style: none;
-  font-size: 2.2rem;
-  padding: 0.9em;
-}
-
-.banner {
-  display: flex;
-  margin-top: 2em;
-  flex-direction: column;
-  align-content: center;
-}
-.banner img {
-  border-radius: 50px;
-}
-
-.grilla {
-  /*contenido de las etiquetas*/
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-}
-
-.grilla__reel {
-  border: 2px solid rgb(179, 190, 14);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 10px;
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  grid-gap: 1.1em;
-}
-
-.subtitulos {
-  text-transform: uppercase;
-  width: 100%;
-  border: 1px solid rgb(0, 0, 0);
-  text-align: center;
-  font-size: 2.1rem;
-  background-color: crimson;
-  color: #ffa;
-}
-
-.grilla__imagen img {
-  /*imagenes de las etiquetas*/
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.grilla__text {
-  /*texto de las etiquetas*/
-  font-size: 1.6rem;
-  text-align: justify;
-}
-
-footer {
-  /*aeui el footer se configura tanto para index como para los link con las redes*/
-  display: flex;
-  height: 12vh;
-  /*entension*/
-}
-footer.footer__index {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-}
-footer.footer__index .icon_face {
-  background-image: url("../img/icon/facebook_icon.png");
-  /*dato obtenido del maps*/
-  background-repeat: no-repeat;
-  background-repeat: no-repeat;
-  background-size: auto 9vh;
-  height: 100%;
-  background-position: center;
-}
-footer.footer__index h2 {
-  text-transform: uppercase;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.5rem;
-  color: rgb(46, 26, 26);
-  text-align: center;
-  width: 100%;
-  font-weight: bold;
-}
-
-/* aqui en el codigo de gallery */
-.gradiente__gallery {
-  background-image: linear-gradient(180deg, #ffff7c 0, #ffff6f 12.5%, #fff565 25%, #ffda5c 37.5%, #f2bd53 50%, #dda14c 62.5%, #c98a46 75%, #b77642 87.5%, #a8663f 100%);
-}
-
-/*la linea roja de los link*/
-.linea {
-  background: #fd0048;
-  width: 100%;
-  height: 5px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.gallery--grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  width: 95%;
-  grid-gap: 10px;
-  margin: auto;
-}
-.gallery--grid img {
-  width: 100%;
-  height: 100%;
-  width: 150px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  transition: transform 0.4s;
-}
-.gallery--grid img:hover {
-  filter: blur(2px);
-  transform: rotate(10deg) scale(1.3);
-}
-
-/* ESTA SECCION SON LOS MODIFICADORES DE LOS LINK DE LOS PERROS */
 /*aui el titulo de los link*/
 header.titulo__gallery {
   border-radius: 20px;
@@ -325,31 +145,251 @@ div.card-body {
   transition: transform 0.5s;
 }
 
-/*clase editora de footer en nosotros y contacto*/
-.footer__icon {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-}
-
-.formulario--center {
-  margin: 0 auto;
-  display: flex;
-  align-self: center;
+form fieldset.formulario--center {
+  margin: 80px auto;
   gap: 20px;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   flex-direction: column;
 }
-
-.formulario__label {
-  gap: 54px;
+form fieldset.formulario--center .formulario__label {
   display: flex;
+  gap: 20px;
 }
-
-.formulario__btn-msj {
+form fieldset.formulario--center .formulario__label ::-moz-placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+form fieldset.formulario--center .formulario__label :-ms-input-placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+form fieldset.formulario--center .formulario__label ::placeholder {
+  font-size: 30px;
+  text-align: center;
+}
+form fieldset.formulario--center .formulario__label label {
+  flex: auto;
+}
+form fieldset.formulario--center .formulario__label input {
+  flex: 13.8;
+}
+form fieldset.formulario--center .formulario__label select {
+  flex: 25.1;
+  text-align: center;
+}
+form fieldset.formulario--center .formulario__label select option#opt1 {
+  /*aqui use un ID para centar un solo item*/
+  margin: 0;
+}
+form fieldset.formulario--center .formulario__label textarea {
+  width: 100%;
+}
+form fieldset.formulario--center .formulario__btn-msj {
   display: flex;
   justify-content: center;
+}
+form fieldset.formulario--center .formulario__btn-msj input {
+  padding: 28px;
+  border-radius: 20px;
+  background: cadetblue;
+  line-height: 1;
+}
+
+body nav.nosotros__link p {
+  font-size: revert;
+  color: rgb(39, 41, 160);
+}
+body nav.nosotros__link img {
+  width: 20%;
+}
+
+.container {
+  max-width: 1000px;
+  min-width: 300px;
+  width: 100%;
+  margin: margin 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-columns: 100%;
+}
+
+.grid__row-3 {
+  display: grid;
+  grid-template-rows: 12vh 5px auto 12vh;
+  /*los 5px son de la linea*/
+}
+
+.titulos {
+  border-radius: 20px;
+  background-image: linear-gradient(red, yellow);
+}
+
+.titulos__logo {
+  width: 100%;
+  display: flex;
+}
+.titulos__logo img {
+  height: 12vh;
+  border-radius: 20px;
+}
+
+.titulo__text {
+  width: 100%;
+}
+
+.titulos__central {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  /*estos en un mixin*/
+  font-size: 5.6rem;
+  font-weight: bold;
+  /*entension*/
+  color: cornsilk;
+}
+
+.titulos__menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.titulos__menu a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  /* coloca el texto con negrita standar*/
+}
+.titulos__menu:hover {
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+}
+.titulos__menu div button a {
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 2.2rem;
+  padding: 0.9em;
+}
+
+.gallery--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 95%;
+  grid-gap: 10px;
+  margin: auto;
+}
+.gallery--grid img {
+  width: 100%;
+  height: 100%;
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: transform 0.4s;
+}
+.gallery--grid img:hover {
+  filter: blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+/* aqui en el codigo de gallery */
+.gradiente__gallery {
+  background-image: linear-gradient(180deg, #ffff7c 0, #ffff6f 12.5%, #fff565 25%, #ffda5c 37.5%, #f2bd53 50%, #dda14c 62.5%, #c98a46 75%, #b77642 87.5%, #a8663f 100%);
+}
+
+/*la linea roja de los link*/
+.linea {
+  background: #fd0048;
+  width: 100%;
+  height: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer {
+  /*aeui el footer se configura tanto para index como para los link con las redes*/
+  display: flex;
+  height: 12vh;
+  /*entension*/
+  /*clase editora de footer en nosotros y contacto*/
+}
+footer.footer__index {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+footer.footer__index .icon_face {
+  background-image: url("../img/icon/facebook_icon.png");
+  /*dato obtenido del maps*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70%;
+  background-position: center;
+}
+footer.footer__index h2 {
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  color: rgb(46, 26, 26);
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+footer .footer__icon {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  width: 50%;
+  height: 100%;
+}
+
+.banner {
+  display: flex;
+  margin-top: 2em;
+  flex-direction: column;
+  align-content: center;
+}
+.banner img {
+  border-radius: 50px;
+}
+
+.grilla {
+  /*contenido de las etiquetas*/
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+}
+
+.grilla__reel {
+  border: 2px solid rgb(179, 190, 14);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 10px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-gap: 1.1em;
+}
+
+.subtitulos {
+  text-transform: uppercase;
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  font-size: 2.1rem;
+  background-color: crimson;
+  color: #ffa;
+}
+
+.grilla__imagen img {
+  /*imagenes de las etiquetas*/
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.grilla__text {
+  /*texto de las etiquetas*/
+  font-size: 1.6rem;
+  text-align: justify;
 }
 
 /* media queries del index */
@@ -409,6 +449,12 @@ div.card-body {
     padding: 10px;
   }
 
+  footer .footer__icon {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    width: 100%;
+    height: 100%;
+  }
   footer h2 {
     text-transform: uppercase;
     font-family: "Times New Roman", Times, serif;

@@ -10,9 +10,8 @@ footer{/*aeui el footer se configura tanto para index como para los link con las
         .icon_face{
             background-image: map-get($icon_red, facebook);/*dato obtenido del maps*/
             background-repeat: no-repeat;
-            background-repeat: no-repeat;
-            background-size: auto 9vh;
-            height: 100%;
+            background-size: contain;
+            height: 70%;
             background-position: center;
         }
         h2{
@@ -26,13 +25,13 @@ footer{/*aeui el footer se configura tanto para index como para los link con las
         }
 
     }
+    /*clase editora de footer en nosotros y contacto*/
+    .footer__icon{
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        width: 50%;
+        height: 100%;
     
-}
-/*clase editora de footer en nosotros y contacto*/
-.footer__icon{
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
+    }
+    
 }
