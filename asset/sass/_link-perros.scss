@@ -39,9 +39,8 @@ div.card-body{
 }
 .container_link--centrar{
     width: 400px;
-    height: 85vh;
     border: 3px solid black;
-    margin: auto;
+    margin: 3% auto;
     display: grid;
     grid-template-areas:"perro button"
                         "detalle detalle"
