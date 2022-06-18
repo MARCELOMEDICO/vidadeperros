@@ -11,7 +11,7 @@
 .grilla{
     /*contenido de las etiquetas*/
     display: grid;
-    grid-template-columns: repeat(5,auto);
+    grid-template-columns: repeat(auto-fill, minmax(201px, 1fr));
 }
 .grilla__reel{
     border: 2px solid rgb(179, 190, 14);
@@ -30,6 +30,7 @@
     font-size: 2.1rem;
     background-color: crimson;
     color: $secundary-color;
+    white-space: nowrap;
 }
 .grilla__imagen{
     img{

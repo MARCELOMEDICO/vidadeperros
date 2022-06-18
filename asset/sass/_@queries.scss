@@ -4,24 +4,44 @@
     .titulos{
         color: #29cd7b;
         flex-flow: column;
-    }  
-    .titulos__menu{
-        display: flex;
-        justify-content: space-around;
-        overflow: hidden;
-        align-items: center;
+        .titulo__logotext{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            img{
+                max-width: 17vw;
+            }
+            
+            .titulos__central{
+                font-size: 5.2vw;
+            }
+        }
+        .titulos__menu{
+            div{
+                display: flex;
+                button{
+                    a{
+                        font-size: 1.3rem;
+                        display: flex;
+                        text-transform: uppercase;
+                        justify-content: center;
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+        }
         
-    }
-   .titulos__logo{
-       width: 100%;  
-   }
-   .titulo__text{
-       width: 100%;
-   }
-   .titulos__central{
-       font-size: 6.9vw;
-   }
+    }  
+    
+   
    header.titulo__gallery{
+    a{
+        img{
+            max-width: 17vw;
+        }
+    }
+
+
        h3{
         text-transform: uppercase;
         font-family: 'Times New Roman', Times, serif;
@@ -32,23 +52,55 @@
 
        }
    }
-   .grilla{ 
-       display: contents;   
-    }
-    .grilla__reel{
-        padding: 10px;
-    }   
-    .subtitulos{
-        display: grid;
-        grid-column: 1/3;
-    }
-    .grilla__imagen{
-        display: flex;
-        align-items: center;
-    }
-    .grilla__text{
-        padding: 10px;
-    }
+   .grilla {
+       display: contents;
+
+       .grilla__reel {
+           padding: 10px;
+
+        //    .subtitulos {
+        
+        //    }
+
+           .grilla__imagen {
+               display: flex;
+               justify-content: center;
+
+           }
+
+           .grilla__text {
+               padding: 10px;
+           }
+       }
+   }
+   .container_link--centrar {
+       max-width: 400px;
+       display: flex;
+       flex-direction: column;
+
+       picture.perro {
+           align-self: center;
+
+           img {
+               padding: 12px;
+               min-width: 48vw;
+           }
+       }
+
+       form.button {
+           width: 90%;
+
+           button {
+               width: 100%;
+               font-size: 3rem;
+               background-color: black;
+               color: coral;
+               font-weight: bolder;
+           }
+       }
+   }
+
+    
     footer{
         .footer__icon{
             display: grid;
@@ -65,5 +117,6 @@
             width: 100%; 
         }
     }
+    
 
 }

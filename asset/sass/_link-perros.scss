@@ -1,78 +1,118 @@
 /* ESTA SECCION SON LOS LINK DE LOS PERROS */
-.centrar__text{ /*esta clase es para hacer un extend*/
+.centrar__text {
+    /*esta clase es para hacer un extend*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/*aui el titulo de los link*/ 
-header.titulo__gallery{
+body.link__perros{
+    display: grid;
+    grid-template-rows: auto 5px 1fr auto;
+}
+/*aui el titulo de los link*/
+header.titulo__gallery {
     border-radius: 20px;
     background-image: $background-header;
     display: grid;
     grid-template-columns: auto 1fr;
-    a{
-        img{
+
+    a {
+        img {
             height: $icon;
             border-radius: 20px;
         }
     }
-    h3{
+
+    h3 {
         text-transform: uppercase;
         font-family: 'Times New Roman', Times, serif;
         color: #23ad61;
         font-size: $font-size-link;
         font-weight: bold;
-        @extend .centrar__text;/*entension*/ 
-    }    
-}
-// aqui le tamaño de las img de los link
-body div.card {
-    width: 80em;
-    img{
-        width: 300px;
-        margin: 10px auto;
-        
+        @extend .centrar__text;
+        /*entension*/
     }
 }
-div.card-body{
+
+//aqui le tamaño de las img de los link
+body div.card {
+    max-width: 40%;
+    min-width: 251px;
+    margin: auto;
+
+    img {
+        width: 300px;
+        margin: 10px auto;
+
+    }
+}
+
+div.card-body {
     margin-top: -10px;
 }
-.container_link--centrar{
-    width: 400px;
+
+.container_link--centrar {
+    max-width: 400px;
     border: 3px solid black;
     margin: 3% auto;
     display: grid;
-    grid-template-areas:"perro button"
-                        "detalle detalle"
-                        ;
-    picture img{
-        width: 250px;
-    }                    
-}
-.perro{
-    align-self: center;
-    justify-self: center;
-    grid-area: perro;}
-.detalle{
-    grid-area: detalle;}
+    grid-template-areas: "perro button"
+                        "detalle detalle";
 
-.lista__info--left{
-    li{
-        list-style: upper-alpha;
-        font-size: 2.4rem;
-        margin: 18px 11px;
+    picture.perro{
+        align-self: center;
+        justify-self: center;
+        grid-area: perro;
+        img{
+            width: 100%;
+            padding: 10px;
+        }
 
     }
-}
-
-.button{
-    display: block;
-    align-self: center;
-    justify-self: center;
-    grid-area: button;
-    font-size: 3rem;
-    &:hover{
-        transform: rotate(-10deg) scale(1.3);
-        transition: transform .5s;
+    form.button{
+        grid-area: button;
+        align-self: center;
+        button{
+            display: block;
+            font-size: 3rem;
+            width: 100%;
+            &:hover {
+                transform: rotate(-10deg) scale(1.3);
+                transition: transform .5s;
+            }
+        }
+    }
+    ul.lista__info--left.detalle{
+        grid-area: detalle;
+        li{
+            list-style: upper-alpha;
+            font-size: 2.4rem;
+            margin: 18px 11px;
+        }
     }
 }
+footer{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    picture.perro__animado{
+        width: 100%;
+        position: relative;
+        animation-name: perro_animado;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        border: 2px solid rgb(212, 23, 23);
+        @keyframes perro_animado {
+            from{
+                
+                left: -50%;
+            }
+            to{
+                
+                left:120%
+            }   
+        }
+        img{
+            transform: rotateY(180deg);
+        }
+    }
+}  

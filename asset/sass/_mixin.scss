@@ -9,3 +9,9 @@
     display: block;
     margin-bottom: 10px;
 }
+@mixin btn-strap{
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 1.6rem;
+    padding: 0.9em;
+}

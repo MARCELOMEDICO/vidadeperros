@@ -1,7 +1,7 @@
-.container{
-    max-width: 1000px;
+.container-index{
+    max-width: 1200px;
     min-width: 300px;
-    width: 100%;
+    width: 80%;
     margin: $m-center;
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -14,15 +14,18 @@
 .titulos{
     border-radius: 20px;
     background-image: $background-header;
-}
-.titulos__logo{
-    width: 100%;
-    display: flex;
-    img{
-        height:$icon;
-        border-radius: 20px
+    .titulo__logotext{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        
+        img{
+            height:$icon;
+            border-radius: 20px
+        }
     }
 }
+       
+
 
 .titulo__text{
     width: 100%;
@@ -32,29 +35,30 @@
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     @include wi_he-100();  /*estos en un mixin*/
-    font-size: 5.6rem;
+    font-size: 4.8rem;
     font-weight: bold;
     @extend .centrar__text;/*entension*/
     color: cornsilk;
+    white-space: nowrap;
 }
 .titulos__menu{
     display: flex;
     width: 100%;
     flex-direction: column;
-    a{
-        text-decoration: none;
-        color: #000000;
-        font-weight: bold;/* coloca el texto con negrita standar*/}
-    &:hover{
-        transition: .5s ease-in-out;
-        border-radius: 20px;}
     div{
         button{
+            &:hover{
+                transition: .5s ease-in-out;
+                border-radius: 20px;}
             a{
                 text-transform: uppercase;
                 list-style: none;
                 font-size: 2.2rem;
-                padding: 0.9em;
+                padding: 0.5em;
+                color: #0a0b0b;
+                text-decoration: none;
+                font-weight: bold;/* coloca el texto con negrita standar*/
+                
             }
         }
     }   
