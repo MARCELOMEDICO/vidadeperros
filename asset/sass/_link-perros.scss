@@ -100,6 +100,8 @@ footer{
         animation-name: perro_animado;
         animation-duration: 10s;
         animation-iteration-count: infinite;
+        height: 100%;
+        
         @keyframes perro_animado {
             from{
                 
@@ -112,6 +114,7 @@ footer{
         }
         img{
             transform: rotateY(180deg);
+            height: 90%;
         }
     }
 }  

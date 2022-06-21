@@ -102,6 +102,11 @@
 
     
     footer{
+        &.footer__index{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+
+        }
         .footer__icon{
             display: grid;
             grid-template-columns: repeat(5, auto);
