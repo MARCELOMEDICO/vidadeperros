@@ -1,12 +1,32 @@
-footer{/*aeui el footer se configura tanto para index como para los link con las redes*/
+footer{/*aqui el footer se configura tanto para index como para los link con las redes*/
     display: flex;
     height: 12vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
     @extend .centrar__text;/*entension*/
+    picture.perro__animado{
+        width: 100%;
+        position: relative;
+        animation-name: perro_animado;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        height: 100%;
+        @keyframes perro_animado {
+            from{
+                left: -50%;
+            }
+            to{
+                left:120%
+            }   
+        }
+        img{
+            transform: rotateY(180deg);
+            height: 90%;
+        }
+    }
     &.footer__index{
         display: grid;
         grid-template-columns: 100px 1fr;
-        
-
         .icon_face{
             background-image: map-get($icon_red, facebook);/*dato obtenido del maps*/
             background-repeat: no-repeat;
@@ -23,7 +43,6 @@ footer{/*aeui el footer se configura tanto para index como para los link con las
             width: 100%;
             font-weight: bold;
         }
-
     }
     /*clase editora de footer en nosotros y contacto*/
     .footer__icon{
@@ -31,7 +50,6 @@ footer{/*aeui el footer se configura tanto para index como para los link con las
         grid-template-columns: repeat(5, auto);
         width: 50%;
         height: 100%;
-    
+        margin-bottom: 10px;    
     }
-    
-}
+} 

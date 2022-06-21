@@ -150,42 +150,6 @@ div.card-body {
   margin: 18px 11px;
 }
 
-footer {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-footer picture.perro__animado {
-  width: 100%;
-  position: relative;
-  -webkit-animation-name: perro_animado;
-          animation-name: perro_animado;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  height: 100%;
-}
-@-webkit-keyframes perro_animado {
-  from {
-    left: -50%;
-  }
-  to {
-    left: 120%;
-  }
-}
-@keyframes perro_animado {
-  from {
-    left: -50%;
-  }
-  to {
-    left: 120%;
-  }
-}
-footer picture.perro__animado img {
-  transform: rotateY(180deg);
-  height: 90%;
-}
-
 form fieldset.formulario--center {
   margin: 80px auto;
   gap: 20px;
@@ -351,11 +315,44 @@ body nav.nosotros__link img {
 }
 
 footer {
-  /*aeui el footer se configura tanto para index como para los link con las redes*/
+  /*aqui el footer se configura tanto para index como para los link con las redes*/
   display: flex;
   height: 12vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
   /*entension*/
   /*clase editora de footer en nosotros y contacto*/
+}
+footer picture.perro__animado {
+  width: 100%;
+  position: relative;
+  -webkit-animation-name: perro_animado;
+          animation-name: perro_animado;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  height: 100%;
+}
+@-webkit-keyframes perro_animado {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 120%;
+  }
+}
+@keyframes perro_animado {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 120%;
+  }
+}
+footer picture.perro__animado img {
+  transform: rotateY(180deg);
+  height: 90%;
 }
 footer.footer__index {
   display: grid;
@@ -383,6 +380,7 @@ footer .footer__icon {
   grid-template-columns: repeat(5, auto);
   width: 50%;
   height: 100%;
+  margin-bottom: 10px;
 }
 
 .banner {

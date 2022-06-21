@@ -91,30 +91,3 @@ div.card-body {
         }
     }
 }
-footer{
-    overflow-x: hidden;
-    overflow-y: hidden;
-    picture.perro__animado{
-        width: 100%;
-        position: relative;
-        animation-name: perro_animado;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        height: 100%;
-        
-        @keyframes perro_animado {
-            from{
-                
-                left: -50%;
-            }
-            to{
-                
-                left:120%
-            }   
-        }
-        img{
-            transform: rotateY(180deg);
-            height: 90%;
-        }
-    }
-}  
