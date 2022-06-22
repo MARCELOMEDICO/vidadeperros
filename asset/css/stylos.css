@@ -450,9 +450,6 @@ footer .footer__icon {
   .titulos .titulo__logotext .titulos__central {
     font-size: 5.2vw;
   }
-  .titulos .titulos__menu div {
-    display: flex;
-  }
   .titulos .titulos__menu div button a {
     font-size: 1.3rem;
     display: flex;
